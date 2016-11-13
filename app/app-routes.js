@@ -4,6 +4,8 @@ let app = angular.module('drone-tracker')
     .config(
         function($stateProvider, $urlRouterProvider) {
         
+                $urlRouterProvider.otherwise('/home')
+        
         $stateProvider
             .state({
                 name: 'home',
@@ -19,8 +21,9 @@ let app = angular.module('drone-tracker')
                 name: 'learn',
                 url: '/learn',
                 template: '<learn></learn>' 
-            }) 
-                $urlRouterProvider.otherwise('/home')
+            })
+
+             
             }) 
 
 
