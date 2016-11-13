@@ -1,0 +1,60 @@
+<html ng-app="drone-tracker">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drone Tracker</title>
+    <link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div class="col-xs-12">
+<nav class="navbar navbar-default navbar-fixed-top  navbar-collapse">
+  <div class="container">
+
+<ul class="nav nav-tabs">
+  <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+  <li ui-sref-active="active"><a ui-sref="search">Search</a></li>
+  <li role="presentation"><a href="#">Learn More</a></li>
+</ul>
+  </div>
+</nav>
+</div>
+
+    
+    <div class="main-content">
+        <ui-view></ui-view>
+    </div>
+
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+  <h5 class="text-center">Drone Tracker. Copyright 2016</h5>
+  </div>
+</nav>
+
+
+
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.8/angular-sanitize.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+     
+     <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>-->
+     
+     <script src="https://gitcdn.link/repo/angular/bower-material/master/angular-material.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app-routes.js"></script>
+    <script src="app/components/drone/drone-service.js"></script>
+    <script src="app/components/drone/home-controller.js"></script>
+    <script src="app/components/drone/search-controller.js"></script>
+        <script src="app/components/drone/learn-controller.js"></script>
+</body>
+
+</html>
