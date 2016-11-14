@@ -10,37 +10,59 @@
             SearchController.$inject = ['DroneService']
         function SearchController(DroneService){
               let sc=this;
-               sc.arr = [];      
+               sc.arr = [];
+                sc.currentPage = 1; 
+                sc.pageSize=12; 
         
                     sc.searchByCountry=function(country){
-                    DroneService.getAllStrikes(country, function(res){
-                        // debugger 
-                    var strikes= res.data.strike; 
-                    strikes.forEach(function(i){
+                        $('#country-button').text('Loading Strikes...');
+                        sc.resetAll()
+                           DroneService.getAllStrikes(country, function(res){    
+                            var strikes= res.data.strike; 
+                            strikes.forEach(function(i){
                         if(i.country == country){
                             sc.arr.push(i)
-                    }
-                })
-                    console.log(sc.arr)
-                    return sc.arr
-            })       
+                            }
+                        })
+                                $('#country-button').text('Search');
+                                let len = sc.arr.length
+                                return sc.arr
+                        })  
                     }
    
-                sc.searchByYear=function(year){
-                    DroneService.getAllStrikes(year, function(res){
-                        // debugger 
-                    var strikes= res.data.strike; 
-                    strikes.forEach(function(i){
+                      sc.searchByYear=function(year){
+                        $('#year-button').text('Loading Strikes...');
+                        sc.resetAll()
+                            DroneService.getAllStrikes(year, function(res){
+                            var strikes= res.data.strike; 
+                            strikes.forEach(function(i){
                         if(i.date.slice(0,4) == year){
                             sc.arr.push(i)
-                    }
-                })
-                    console.log(sc.arr)
-                    return sc.arr
-            })
+                           }
+                        })
+                                $('#year-button').text('Search');
+                                let len = sc.arr.length
+                                return sc.arr
+                       
+                    })
             
-                    }
+                }
+                sc.resetAll =function(){
+                    sc.arr=[];
+                    return sc.arr;
+                } 
 
         }
 
+
+
+
+
+
  })(); 
+
+
+
+
+
+ 

@@ -12,7 +12,7 @@
             <option value="Yemen">Yemen</option>
           </select>
        
-           <button class="btn-primary" name="add-button" ng-click="$ctrl.searchByCountry($ctrl.country)">Search</button>    
+           <button class="btn-primary" id="country-button" ng-click="$ctrl.searchByCountry($ctrl.country)">Search</button>    
      </form>
     </div>
 
@@ -36,27 +36,28 @@
             <option value="2015">2015</option>
             <option value="2016">2016</option>
               </select>
-           <button class="btn-primary" ng-click="$ctrl.searchByYear($ctrl.year)">Search</button>    
+           <button class="btn-primary" id="year-button" ng-click="$ctrl.searchByYear($ctrl.year)">Search</button>    
      </form>
     </div>     
 
 
-    <div class="results" ng-repeat="strike in $ctrl.arr" >
+    <div class="results" ng-if="$ctrl.arr.length > 0"> <p>Strikes Found: {{$ctrl.arr.length}}</p>
 
 <div class="container-fluid">
 <div class="row">
-<div class=" col-xs-12 col-sm-4">
-
-<div class="card card-block">
+<div class=" col-xs-12 col-sm-4" dir-paginate="strike in $ctrl.arr | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
+<div class="card card-block"  >
   <h4 class="card-title">{{strike.town || 'Unknown Town'}}, {{strike.country}}</h4>
   <h5>{{strike.date.slice(0,10)}}</h5>
   <p class="card-text">Deaths: {{strike.deaths}}</p>
-  <p> Summary: {{strike.bij_summary_short}}</p>
+  <p> Summary: {{strike.bij_summary_short  || 'No Summary Available'}}</p>
   <a href="{{strike.bij_link}}" class="card-link">Read More</a>
 </div>
+</div>
+</div>
 
+<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/components/drone/dirPagination.tpl.html"></dir-pagination-controls>
 
 </div>
-</div>
-</div>
+
 </div>

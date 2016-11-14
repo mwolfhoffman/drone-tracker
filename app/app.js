@@ -1,4 +1,5 @@
 angular.module('drone-tracker', [
     'ui.router',
-    'ngSanitize'
-])
+    'ngSanitize',
+    'angularUtils.directives.dirPagination'
+    ])
