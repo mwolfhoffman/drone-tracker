@@ -1,8 +1,79 @@
-img {
-    width:50%
+/*http://colorhunt.co/c/9501*/
+body{
+
+    color:white;
+    overflow:auto;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+.bg-cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bg-center{
+    background-position: center;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-between{
+    align-items: space-between;
+}
+.fill-parent{
+    height: 100%;
+}
+
+.accent{
+    color:#EE0E51;
+}
+
+.scroll-down-indicator{
+    position: absolute;
+    bottom:2%;
+    width: 100%;
+    text-align: center;
+}
+
+.home-container{
+    background-image: url(mq1-predator.jpg);
+    height:100%;
+    height:100vh;
+
+}
+.home-container-overlay{
+    background-color:rgba(16,16,16,0.93);
+}
+.home-text-container{
+    display: block;
+    position: relative;
+    overflow:auto;
+    text-align: left;
+    font-family: 'Share Tech Mono', monospace;
+    margin-top:10%;
+
+
+}
+h1{
+    color:white;
+    font-family: 'Share Tech Mono', monospace
+}
+.splash-image {
+    width:50%;
+    filter:grayscale(100%);
 }
 
 .page-header{
-    margin-top:10%; 
+    margin-top:10%;  
 
 }

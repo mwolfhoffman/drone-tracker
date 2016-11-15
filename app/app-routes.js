@@ -7,7 +7,7 @@ let app = angular.module('drone-tracker')
         $stateProvider
             .state({
                 name: 'home',
-                url: '/home',
+                url: '/home?' + Date.now(),
                 template: '<home></home>', 
             })
             .state({
@@ -20,7 +20,7 @@ let app = angular.module('drone-tracker')
                 url: '/learn',
                 template: '<learn></learn>' 
             }) 
-                $urlRouterProvider.otherwise('/home')
+                $urlRouterProvider.otherwise('/home?' + Date.now())
             }) 
 
 

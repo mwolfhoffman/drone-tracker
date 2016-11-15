@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Drone Tracker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/journal/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
 </head>
 
 <body>
 
 
-<div class="col-xs-12">
+<!--<div class="col-xs-12">
 <nav class="navbar navbar-default navbar-fixed-top  navbar-collapse">
   <div class="container">
 
@@ -23,20 +28,81 @@
 </ul>
   </div>
 </nav>
-</div>
+</div>-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
 
     
-    <div class="main-content">
         <ui-view></ui-view>
-    </div>
+<canvas id="world-strikes" width="400" height="200"></canvas>
+
+     <script>
+var ctx = document.getElementById("world-strikes");
+var myChart = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+        datasets: [{
+            label: '# of Votes',
+            data: [                
+                    {
+                        x: 20,
+                        y: 23,
+                        r: 15
+                    },
+                    {
+                        x: 40,
+                        y: 10,
+                        r: 10
+                    },
+                    {
+                        x: 1100,
+                        y: 122,
+                        r: 60
+                    },
+                    {
+                        x: 40,
+                        y: 10,
+                        r: 10
+                    }
+                ],
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
 
 
-
+<!--
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container">
   <h5 class="text-center">Drone Tracker. Copyright 2016</h5>
   </div>
-</nav>
+</nav>-->
 
 
 
@@ -47,7 +113,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
      
      <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>-->
-     
+     <script   src='https://code.jquery.com/jquery-3.1.1.min.js'   integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8='   crossorigin='anonymous'></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/4.2.3/typeit.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+
      <script src="https://gitcdn.link/repo/angular/bower-material/master/angular-material.js"></script>
     <script src="app/app.js"></script>
     <script src="app/app-routes.js"></script>
