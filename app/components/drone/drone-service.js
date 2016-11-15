@@ -1,4 +1,5 @@
 let app = angular.module('drone-tracker'); 
+
     app.service('DroneService', function ($http) {
     var ds = this
 
@@ -12,8 +13,6 @@ let app = angular.module('drone-tracker');
              console.log(err)
              })
            }
-
-
 
 })
     

@@ -4,15 +4,14 @@
         .component('search', {
             templateUrl: 'app/components/drone/search.html',
             controller: SearchController
-
         })
 
-            SearchController.$inject = ['DroneService']
+        SearchController.$inject = ['DroneService']
         function SearchController(DroneService){
               let sc=this;
                sc.arr = [];
                 sc.currentPage = 1; 
-                sc.pageSize=12; 
+                sc.pageSize= 10; 
         
                     sc.searchByCountry=function(country){
                         $('#country-button').text('Loading Strikes...');
