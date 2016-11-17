@@ -7,10 +7,17 @@
                     })
 
 
-                    
+LearnController.$inject =['DroneService']     
     
-    function LearnController() {
+    function LearnController(DroneService) {
         var hc = this;
+           hc.getAll = function(){
+        DroneService.getAllStrikes(function(res){
+                    // debugger
+            console.log(res.data.strike)
+            return res.data.strike
+        })
+        }
        
         }
         

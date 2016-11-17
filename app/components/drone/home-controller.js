@@ -19,9 +19,7 @@
             return res.data.strike
         })
         }
-        hc.getPakistan = ()=>{ 
-            DroneService.getPakistan()
-        }
+        
 
 
 }
