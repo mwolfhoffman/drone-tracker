@@ -1,9 +1,8 @@
 let app = angular.module('drone-tracker'); 
 
     app.service('DroneService', function ($http) {
-    var ds = this
-
-
+    var ds = this;
+    
         ds.getAllStrikes = (query, cb)=>{
            var apiUrl = 'https://api.dronestre.am/data' 
            $http.get(apiUrl)
