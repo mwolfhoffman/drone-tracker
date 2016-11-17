@@ -1,13 +1,14 @@
 ( function()  {
    
-   angular.module('drone-tracker')
+   angular
+        .module('drone-tracker')
         .component('map', {
             templateUrl: 'app/components/drone/map.html',
             controller: MapController
 
         })
 
-        MapController.$inject = ['DroneService']
+        MapController.$inject = ['DroneService', 'ngMap']
 
        function MapController(DroneService){
           let mc = this;
