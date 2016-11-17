@@ -16,8 +16,10 @@
                     sc.searchByCountry=function(country){
                         $('#country-button').text('Loading Strikes...');
                         sc.resetAll()
+                        debugger 
                            DroneService.getAllStrikes(country, function(res){    
-                            var strikes= res.data.strike; 
+                            var strikes= res.data.strike;
+                            // debugger 
                             strikes.forEach(function(i){
                         if(i.country == country){
                             sc.arr.push(i)
@@ -32,6 +34,7 @@
                       sc.searchByYear=function(year){
                         $('#year-button').text('Loading Strikes...');
                         sc.resetAll()
+                            debugger 
                             DroneService.getAllStrikes(year, function(res){
                             var strikes= res.data.strike; 
                             strikes.forEach(function(i){
