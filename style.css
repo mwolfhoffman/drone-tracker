@@ -26,9 +26,10 @@ img {
 }
 
 .bar {
-  background: blue;
+  background: grey;
   position: absolute;
   bottom: 0;
+  color: black; 
 }
 
 span {
