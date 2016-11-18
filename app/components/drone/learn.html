@@ -1,0 +1,16 @@
+<canvas id="canvasId"></canvas>
+    <!--[if IE]><script src="excanvas.js"></script><![endif]-->
+
+
+
+ <script>       
+var cxt = document.getElementById("canvasId").getContext("2d");
+  
+  
+var graph = new BarGraph(ctx);
+graph.margin = 2;
+graph.width = 450;
+graph.height = 150;
+graph.xAxisLabelArr = ["Carter", "Regan", "Bush", "Clinton", "Bush", "Obama", "Trump"];
+graph.update([0, 0, 0, 0, 0, 50, 506]);
+ </script>  
