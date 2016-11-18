@@ -1,16 +1,15 @@
-<canvas id="canvasId"></canvas>
-    <!--[if IE]><script src="excanvas.js"></script><![endif]-->
-
-
-
- <script>       
-var cxt = document.getElementById("canvasId").getContext("2d");
-  
-  
-var graph = new BarGraph(ctx);
-graph.margin = 2;
-graph.width = 450;
-graph.height = 150;
-graph.xAxisLabelArr = ["Carter", "Regan", "Bush", "Clinton", "Bush", "Obama", "Trump"];
-graph.update([0, 0, 0, 0, 0, 50, 506]);
- </script>  
+<div ng-app="drone-tracker">
+  <!--<div ng-controller="LearnController as learn">-->
+    <!--bar chart-->
+    <h2>Bar Chart</h2>
+    <ul class="chart" style="width:{{$ctrl.width}}px; height:{{$ctrl.height}}px;">
+      <!-- Labels -->
+      <div class="y" style="width:{{$ctrl.height}}px;">{{$ctrl.yAxis}}</div>
+      <div class="x">{{$ctrl.xAxis}}</div>
+      <!-- Data -->
+       <li ng-repeat="bar in $ctrl.data" class="bar" style="height:{{bar.value / $ctrl.max * $ctrl.height}}px; width:{{$ctrl.width / $ctrl.data.length - 5}}px; left:{{$index / $ctrl.data.length * $ctrl.width}}px;">
+       <span>{{bar.label}}:{{bar.value}}</span></li>
+    </ul>
+    
+  <!--</div>-->
+</div>
