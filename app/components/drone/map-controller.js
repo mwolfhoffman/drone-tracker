@@ -8,11 +8,24 @@
 
         })
 
-        MapController.$inject = ['ngMap']
+        MapController.$inject = ['DroneService']
 
        function MapController(){
           let mc = this;
-        }
+
+          mc.getAll=()=>{
+                DroneService.mapStrikes((res)=>{
+                    let allStrikes = [];
+                    let strike = res.data.strike
+                    strike.forEach((s)=>{
+                        allStrikes.push(s)
+                        //use strike.lat / strike.lon; //
+                        return allStrikes;
+                    })    
+                })
+              }
+          }
+        
 
 
 

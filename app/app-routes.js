@@ -22,6 +22,11 @@ let app = angular.module('drone-tracker')
                 url: '/map',
                 template: '<map></map>' 
             })
+             .state({
+                name: 'learn',
+                url: '/learn',
+                template: '<learn></learn>' 
+            })
   
 
         })
