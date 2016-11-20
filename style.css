@@ -39,7 +39,7 @@ span {
     transform:rotate(-90deg) translateY(-50%);
     transform-origin: left top;
     font-weight:bold;
-    opacity:0;
+    opacity:1;
     transition:0.3s;
     white-space:nowrap;
   }

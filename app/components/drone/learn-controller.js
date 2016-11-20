@@ -11,11 +11,11 @@
     function LearnController(DroneService) {
         var lc = this;
 
-
+/////HARD CODED STRIKES/YR GRAPH/////
  lc.width = 600;
     lc.height = 350;
-    lc.yAxis = 'Year';
-    lc.xAxis = 'Drone Strikes';
+    lc.yAxis = 'Number of Drone Strikes';
+    lc.xAxis = 'Year';
     
     // Data 
 
@@ -92,7 +92,7 @@
         lc.max = lc.data[i].value;
     }
    
-
+///////////////////////////////
 
 
 

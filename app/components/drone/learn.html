@@ -1,3 +1,5 @@
+<!--https://krispo.github.io/angular-nvd3/#/quickstart-->
+
 <div ng-app="drone-tracker">
   <!--<div ng-controller="LearnController as learn">-->
     <!--bar chart-->
@@ -8,18 +10,20 @@
     <div class="row">
     <div class="col-xs-12"> 
 
-    <ul class="chart" style="width:{{$ctrl.width}}px; height:{{$ctrl.height}}px;">
+    <div class="chart" style="width:{{$ctrl.width}}px; height:{{$ctrl.height}}px;">
       <!-- Labels -->
       <div class="y" style="width:{{$ctrl.height}}px;">{{$ctrl.yAxis}}</div>
       <div class="x">{{$ctrl.xAxis}}</div>
       <!-- Data -->
-       <li ng-repeat="bar in $ctrl.data" class="bar" style="height:{{bar.value / $ctrl.max * $ctrl.height}}px; width:{{$ctrl.width / $ctrl.data.length - 5}}px;
+       <div ng-repeat="bar in $ctrl.data" class="bar" style="height:{{bar.value / $ctrl.max * $ctrl.height}}px; width:{{$ctrl.width / $ctrl.data.length - 5}}px;
         left:{{$index / $ctrl.data.length * $ctrl.width}}px;">
-       <span>{{bar.label}}:   {{bar.value}} strikes</span></li>
-    </ul>
-    
-  <!--</div>-->
+       <span>{{bar.label}}:   {{bar.value}} strikes</span></div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+
 </div>
-    </div>
-    </div>
-        </div>
