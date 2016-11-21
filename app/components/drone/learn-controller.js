@@ -11,15 +11,18 @@
     function LearnController(DroneService) {
         var lc = this;
 
-/////HARD CODED STRIKES/YR GRAPH/////
- lc.width = 600;
-    lc.height = 350;
-    lc.yAxis = 'Number of Drone Strikes';
-    lc.xAxis = 'Year';
-    
-    // Data 
+//////////////////////////////
+////fusion hard code test///////
 
-    lc.data = [
+
+lc.myDataSource = {
+    chart: {
+        caption: "US Drone Strikes Per Year",
+        subCaption: "2002- Present",
+        // numberSuffix: " strikes",
+        theme: "fint"
+    },
+    data: [
       {
       label: '2002',
       value: 1
@@ -80,21 +83,12 @@
       label: '2016',
       value: 19
       },
-    ];
-    
-    // Find Maximum X & Y Axis Values - this is used to position the data as a percentage of the maximum
-    lc.max = 0;
-    
-    var arrLength = lc.data.length;
-    for (var i = 0; i < arrLength; i++) {
-        // Find Maximum X Axis Value
-        if (lc.data[i].value > lc.max)
-        lc.max = lc.data[i].value;
-    }
-   
-///////////////////////////////
+    ]
+};
 
 
+////////////////////////////////////
+////////////////////////////////////
 
 
            lc.getAll = function(){
