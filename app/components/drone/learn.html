@@ -1,31 +1,22 @@
 <!--https://krispo.github.io/angular-nvd3/#/quickstart-->
 
-<div ng-app="drone-tracker">
-    <div class="container-responsive">
-        <div class="row">
-            <div class="col-xs-6">
-                <!-- Pie 3D chart -->
-                <div id="chart-container" class="pie-chart"></div>
-            </div>
-            </div>
-  
-<div class="row">
-<div class="col-xs-6">
-<fusioncharts
-    class="bar-graph"
-    width="600"
-    height="400"
-    type="column3d"
-    datasource="{{$ctrl.myDataSource}}"> </fusioncharts>
+<div class="container-responsive">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- Pie 3D chart -->
+            <div id="chart-container" class="pie-chart"></div>
+        </div>
+    </div>
 
-</div>
+    <div class="row">
+        <div class="col-xs-12">
+            <fusioncharts class="bar-graph" width="600" height="400" type="column3d" datasource="{{$ctrl.myDataSource}}"> </fusioncharts>
+        </div>
+    </div>
 </div>
 
 
 
-</div>
-
-</div>
 
 
 <script>
