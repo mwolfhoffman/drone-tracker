@@ -10,6 +10,7 @@
     LearnController.$inject =['DroneService']     
     function LearnController(DroneService) {
         var lc = this;
+        lc.graphWidth = window.innerWidth;
 
 //////////////////////////////
 ////fusion hard code test///////

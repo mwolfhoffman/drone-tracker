@@ -10,7 +10,7 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <fusioncharts class="bar-graph" width="600" height="400" type="column3d" datasource="{{$ctrl.myDataSource}}"> </fusioncharts>
+            <fusioncharts class="bar-graph" width="{{$ctrl.graphWidth}}" height="400" type="column3d" datasource="{{$ctrl.myDataSource}}"> </fusioncharts>
         </div>
     </div>
 </div>
@@ -34,7 +34,7 @@
                 "paletteColors": "#0075c2,#1aaf5d,#f2c500,#f45b00,#8e0000",
                 "bgColor": "#ffffff",
                 "showBorder": "0",
-                "use3DLighting": "0",
+                "use3DLighting": "1",
                 "showShadow": "0",
                 "enableSmartLabels": "0",
                 "startingAngle": "0",
@@ -47,10 +47,10 @@
                 "toolTipColor": "#ffffff",
                 "toolTipBorderThickness": "0",
                 "toolTipBgColor": "#000000",
-                "toolTipBgAlpha": "80",
+                "toolTipBgAlpha": "0",
                 "toolTipBorderRadius": "2",
                 "toolTipPadding": "5",
-                // "showHoverEffect":"1",
+                "showHoverEffect":"1",
                 "showLegend": "1",
                 "legendBgColor": "#ffffff",
                 "legendBorderAlpha": '0',
