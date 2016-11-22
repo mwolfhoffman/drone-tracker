@@ -17,7 +17,7 @@
             return check;
         };
 
-        lc.graphWidth = window.mobilecheck() ? window.innerWidth : 400;
+        lc.graphWidth = window.mobilecheck() ? window.innerWidth-50 : 400;
 
         //////////////////////////////
         ////fusion hard code test///////
