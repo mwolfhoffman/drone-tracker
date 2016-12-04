@@ -2,7 +2,9 @@ img {
     width:50%
 }
 
-
+.card-block{
+      height: 300px;
+}
 
 .bar-graph {
     -webkit-transform: rotate(90deg);
