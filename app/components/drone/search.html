@@ -79,22 +79,24 @@
     <div class="container-fluid">
         <div class="row">
             <div dir-paginate="strike in $ctrl.arr | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
-                <div class="col s12 m4">
-                    <div class="card card-block">
+                <div class="result col s12 m4">
+                    <div class="card">
+                    <div class="card-block">
                         <h4 class="card-title">{{strike.town || 'Unknown Town'}}, {{strike.country}}</h4>
                         <h5>{{strike.date.slice(0,10) | date}}</h5>
                         <p class="card-text">Deaths: {{strike.deaths_max}}</p>
                         <p class="card-text"> Injuries: {{strike.injuries}} </p>
                         <p class="card-text">{{strike.narrative}}</p>
 
-                        <!--<p> Summary: {{strike.bij_summary_short || 'No Summary Available'}}</p>-->
+                        <p> Summary: {{strike.bij_summary_short || 'No Summary Available'}}</p>
                         <!--<a target="_blank" href="{{strike.bij_link}}" class="card-link">
                         <button id="link-btn" class="btn-small btn-warning">Read More</button>
                         </a>-->
                     </div>
                         <!--<div id="content"></div>-->
                 </div>
-            </div>
+            </div>       
+        </div>            
         </div>
     </div>
         <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/components/drone/dirPagination.tpl.html"></dir-pagination-controls>

@@ -19,8 +19,20 @@ img {
 
 
 
+.card{
+    position: relative;
+    background-color: rgba(255,255,255,.15);
+    margin: 0.5rem 0 1rem 0;
+    overflow-y: auto;
+
+}
 .card-block{
-      height: 40vh;
+    height: 40vh;
+        background-color: rgba(255,255,255,.15);
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    /*overflow: auto; */
+
 }
 
 
@@ -30,3 +42,15 @@ img {
     transform: rotate(90deg);
 }
 
+ /*#container1{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+ #container2{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding-right: 20px;
+}*/
