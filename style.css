@@ -3,9 +3,13 @@ img {
 }
 
 .card-block{
-      height: 35vh;
+      height: 50vh;
 }
 
+
+   #content { width: 600px; height: 600px; }
+
+   
 .bar-graph {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
