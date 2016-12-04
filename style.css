@@ -1,19 +1,31 @@
+body{
+
+    color:seagreen;
+    overflow:auto;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+    background: black; 
+
+}
+
+h3{
+    color:seagreen;
+    font-family: 'Share Tech Mono', monospace;
+}
+
 img {
     width:50%
 }
 
+
+
 .card-block{
-      height: 50vh;
+      height: 40vh;
 }
 
 
-   #content { width: 600px; height: 600px; }
 
-   
 .bar-graph {
     -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
