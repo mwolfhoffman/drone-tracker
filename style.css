@@ -1,12 +1,18 @@
 body{
-
+    /*background: black; */
     color:seagreen;
     overflow:auto;
     font-family: 'Roboto Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
-    background: black; 
-
-}
+     
+     background:   linear-gradient(
+      rgba(5, 5, 5, 0.86), 
+      rgba(5, 5, 5, 0.86)
+    ),
+    /* bottom, image */
+    url('app/images/mq1-predator.jpg');
+    
+} 
 
 h3{
     color:seagreen;

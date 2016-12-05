@@ -36,7 +36,7 @@
             callback: ()=>$('#dr3one-intro').fadeOut(1000)
         });
         setInterval(()=>{
-            $('#scroll-down').fadeToggle();
+            $('#info-arrow').fadeToggle();
         }, 1000)
 
 
