@@ -27,14 +27,14 @@ img {
 
 .card{
     position: relative;
-    background-color: rgba(255,255,255,.15);
+    background-color: rgba(52, 49, 40, 0.7);
     margin: 0.5rem 0 1rem 0;
     overflow-y: auto;
 
 }
 .card-block{
     height: 40vh;
-        background-color: rgba(255,255,255,.15);
+        background-color: rgba(52, 49, 40, 0.7);
     transition: box-shadow .25s;
     border-radius: 2px;
     /*overflow: auto; */
