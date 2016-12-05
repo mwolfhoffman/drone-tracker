@@ -23,7 +23,10 @@
 
 
 
-   <nvd3 options="$ctrl.options" data="$ctrl.data"></nvd3>
+<u>
+<h5>US Drone Strikes per Year:</h5>
+</u>
+  <nvd3 options="$ctrl.options" data="$ctrl.data"></nvd3>
 
 
 
@@ -31,8 +34,19 @@
 
 
 
-
-
+  <div class="carousel">
+    <a class="carousel-item"><img src="app/images/stop.jpg"></a>
+    <a class="carousel-item"><img src="app/images/funeral.jpg"></a>
+    <a class="carousel-item"><img src="app/images/boy.jpg"></a>
+   <a class="carousel-item"><img src="app/images/flag.jpg"></a>
+ 
+  </div>
+<script>
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+        
+</script>
 
 
 
@@ -49,17 +63,3 @@
 </div>-->
 
 
-
-
-
-
-<!--CHARTS
-<fusioncharts width="{{$ctrl.graphWidth}}" type="pie3d" datasource="{{$ctrl.pieData}}"></fusioncharts>
-
-
-<fusioncharts class="bar-graph" width="{{$ctrl.graphWidth}}" type="column3d" datasource="{{$ctrl.myDataSource}}"> </fusioncharts>-->
-
-
-
-
-<!--http://2ndamendmentfight.com/wp-content/uploads/2015/03/drone-strike-children-02.jpg-->
