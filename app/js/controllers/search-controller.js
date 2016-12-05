@@ -2,7 +2,7 @@
 
     angular.module('drone-tracker')
         .component('search', {
-            templateUrl: 'app/components/drone/search.html',
+            templateUrl: 'partials/search.html',
             controller: SearchController
         })
 

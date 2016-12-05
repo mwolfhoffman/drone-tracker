@@ -3,6 +3,5 @@ angular.module('drone-tracker', [
     'ngSanitize',
     'angularUtils.directives.dirPagination' ,
     'nvd3' ,
-    'ng-fusioncharts',
     'ui.bootstrap'
         ])

@@ -2,7 +2,7 @@
 
     angular.module('drone-tracker')
         .component('learn', {
-            templateUrl: 'app/components/drone/learn.html',
+            templateUrl: 'partials/learn.html',
             controller: LearnController
         })
 

@@ -2,7 +2,7 @@
 
   angular.module('drone-tracker')
         .component('home', {
-            templateUrl: 'app/components/drone/home.html',
+            templateUrl: 'partials/home.html',
             controller: HomeController
                     })
 
