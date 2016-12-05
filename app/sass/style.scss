@@ -1,0 +1,91 @@
+
+body{
+    /*background: black; */
+    color:seagreen;
+    overflow:auto;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+     
+     background:   linear-gradient(
+      rgba(5, 5, 5, 0.86), 
+      rgba(5, 5, 5, 0.86)
+    ),
+    /* bottom, image */
+    url('../images/mq1-predator.jpg');
+    
+} 
+
+h3{
+    color:seagreen;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+img {
+    width:50%
+}
+
+
+
+.card{
+    position: relative;
+    background-color: rgba(52, 49, 40, 0.7);
+    margin: 0.5rem 0 1rem 0;
+    overflow-y: auto;
+
+}
+.card-block{
+    height: 40vh;
+        background-color: rgba(52, 49, 40, 0.7);
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    /*overflow: auto; */
+
+}
+
+
+
+.bar-graph {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.accent{
+    color: red; 
+}
+
+html {
+    overflow: auto;
+}
+body {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    padding: 30px; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: black; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: grey; 
+}

@@ -1,0 +1,114 @@
+<div class="container-fluid">
+
+
+    <!--search parameters-->
+    <center>
+        <div class="row">
+            <div class="country-search col s12 m6">
+                <form class='search search-position-form'>
+                    <select name='positionSearch' ng-model="$ctrl.country">
+                              <option value="" disabled selected>Choose By Country</option>
+                                    <option value="Pakistan">Pakistan</option>
+                                    <option value="Somalia">Somalia</option>
+                                    <option value="Yemen">Yemen</option>
+                                    </select>
+                    <button class="btn-primary" id="country-button" ng-click="$ctrl.searchByCountry($ctrl.country)">Search</button>
+                </form>
+            </div>
+
+            <div class="year-search col s12 m6">
+                <form class="search search-year-form">
+
+                    <select name="yearSearch" ng-model="$ctrl.year">
+      <option value="" disabled selected>Choose By Year</option>
+            <option value="2002" >2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>  
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+    </select>
+                    <button class="btn-primary" id="year-button" ng-click="$ctrl.searchByYear($ctrl.year)">Search</button>
+                </form>
+            </div>
+        </div>
+</div>
+<script>
+      $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
+
+
+
+<!--Results and Pagination Choice-->
+<div class="container">
+    <div ng-if="$ctrl.arr.length > 0">
+        <div class="row">
+            <div class="results col s4">
+                <p>Strikes Found: <b>{{$ctrl.arr.length}}</b></p>
+            </div>
+            <div class="col s4 push-s4">
+                <p>Per Page:
+                    <input type="number" min="1" max="100"  ng-model="$ctrl.pageSize"></input> </p>
+                </div>
+        </div>
+        </div>
+            </div>
+            
+<!--<div class="container">
+    <div class="row">-->
+<center>
+<div class="col col s6" id="resultId"></div>
+<!--</center>
+</div>
+</div>-->
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div dir-paginate="strike in $ctrl.arr | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
+                <div class="result col s12 m4">
+                    <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">{{strike.town || 'Unknown Town'}}, {{strike.country}}</h4>
+                        <h5>{{strike.date.slice(0,10) | date}}</h5>
+                        <p class="card-text">Deaths: {{strike.deaths_max}}</p>
+                        <p class="card-text"> Injuries: {{strike.injuries}} </p>
+                        <p class="card-text">{{strike.narrative}}</p>
+
+                        <p> Summary: {{strike.bij_summary_short || 'No Summary Available'}}</p>
+                        <!--<a target="_blank" href="{{strike.bij_link}}" class="card-link">
+                        <button id="link-btn" class="btn-small btn-warning">Read More</button>
+                        </a>-->
+                    </div>
+                        <!--<div id="content"></div>-->
+                </div>
+            </div>       
+        </div>            
+        </div>
+    </div>
+        <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="./dirPagination.tpl.html"></dir-pagination-controls>
+
+
+
+
+
+<!--<script>
+$(document).ready(function(){
+  $("#link-btn").click(function(){
+    debugger 
+    $(this.card).load($(this).attr('href'));
+  });
+});
+</script>-->
