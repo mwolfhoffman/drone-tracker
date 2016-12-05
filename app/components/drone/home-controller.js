@@ -38,7 +38,7 @@
             startDelay:600,
             breakDelay: 2000,
             breakLines: true,
-            callback: ()=>$('#dr3one-intro').fadeOut(1000)
+            callback: ()=>$('#drone-intro').fadeOut(1000)
         });
         setInterval(()=>{
             $('#scroll-down').fadeToggle();
@@ -50,3 +50,20 @@
 }
 
 })(); 
+
+
+
+
+// (function() {
+// var scripts = {
+
+// }
+// var styles = {
+
+// }
+// function ScriptTemplate(obj){
+    
+// }
+//     $("#someElement").append( script );
+
+// })();
