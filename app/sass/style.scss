@@ -1,7 +1,7 @@
-
+@import "variables.scss";
 body{
     /*background: black; */
-    color:seagreen;
+    color:$colorA;
     overflow:auto;
     font-family: 'Roboto Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
