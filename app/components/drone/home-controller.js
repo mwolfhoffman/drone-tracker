@@ -24,7 +24,7 @@
             strings: [
                         'The US government has conducted over <span class="accent">500</span> covert drone strikes since the year 2001.',
                         'By some estimates, the perpetrators kill <span class="accent">9</span> innocent civilians for every <span class="accent">1</span> terrorist.',
-                        '<span class="accent">Drone Tracker</span> is here to <b> <font color="red">expose</font></b> them.'
+                        'Drone Tracker is here to <span class="accent"><b>expose</b></span> them.'
                      ],
             lifeLike: true,
             loop:false,
