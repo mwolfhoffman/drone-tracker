@@ -24,40 +24,15 @@
 
 
 <h5>US Drone Strikes per Year:</h5>
-
   <nvd3 style="fill:#0d6841;stroke:#0d6841;"   options="$ctrl.options" data="$ctrl.data"></nvd3>
 
 
 
-
-
-
-
-  <div class="carousel">
-    <a class="carousel-item"><img src="app/images/stop.jpg"></a>
-    <a class="carousel-item"><img src="app/images/funeral.jpg"></a>
-    <a class="carousel-item"><img src="app/images/boy.jpg"></a>
-   <a class="carousel-item"><img src="app/images/flag.jpg"></a>
- 
-  </div>
-<script>
-    $(document).ready(function(){
-      $('.carousel').carousel();
-    });
-        
-</script>
-
-
-
-
 <!---McCall's UI-->
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
-
 <canvas id="world-strikes" width="400" height="200"></canvas>
 
      <script>
-var ctx = document.getElementById("world-strikes");
+var ctx = $("#world-strikes");
 var myChart = new Chart(ctx, {
     type: 'bubble',
     data: {
@@ -118,6 +93,24 @@ var myChart = new Chart(ctx, {
 </script>
 
 <!---->
+
+
+
+ <div class="carousel">
+    <a class="carousel-item"><img src="app/images/stop.jpg"></a>
+    <a class="carousel-item"><img src="app/images/funeral.jpg"></a>
+    <a class="carousel-item"><img src="app/images/boy.jpg"></a>
+   <a class="carousel-item"><img src="app/images/flag.jpg"></a>
+ 
+  </div>
+<script>
+    $(document).ready(function(){
+      $('.carousel').carousel();
+    });
+        
+</script>
+
+
 
 
 
