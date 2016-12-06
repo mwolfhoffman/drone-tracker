@@ -12,7 +12,7 @@
         var lc = this;
 
         $('#data-intro').typeIt({
-            strings: ['The data on this page is provided via The Bureau of Investigates', 'What you see here, you will  <b>not</b> see in the mainstream media.', 'What you see here <b>will</b> shock you.'],
+            strings: ['The data on this page is provided via The Bureau of Investigates ...'],
             lifeLike: true,
             loop: false,
             loopDelay: 1000,
