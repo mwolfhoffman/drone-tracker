@@ -68,3 +68,29 @@ img {
     color:$accent; 
 }
 
+@keyframes strike{
+    0%{
+        width:1;
+        height:1;
+        background:#ff003b;
+        opacity:1;
+        transform:scale(0)
+    }
+    100%{
+        opacity:0;
+        transform:scale(50)
+    }
+}
+.strike{
+    opacity:0;
+    $strike:#ff003b;
+    position:absolute;
+    background: $strike;
+    top:50%;
+    left:50%;
+    border:5px $strike solid;
+    border-radius: 50%;
+    animation: strike 2s;
+    animation-iteration-count: 1;
+    animation-timing-function:cubic-bezier(.14,.88,.66,.53)
+}
