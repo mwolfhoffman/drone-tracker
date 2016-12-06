@@ -40,6 +40,11 @@
 
         lc.graphWidth = window.mobilecheck() ? window.innerWidth-50 : 400;
 
+
+
+
+        
+
         ///////////////pie char/////////////
         ///////////////////////////////
 
