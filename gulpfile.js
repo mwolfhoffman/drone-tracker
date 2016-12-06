@@ -23,7 +23,8 @@ const del           = require('del');
 const plumber       = require('gulp-plumber');
 const notify        = require('gulp-notify');
 
-// const ghPages       = require('gulp-gh-pages');
+
+const ghPages       = require('gulp-gh-pages');
 
 const siteRoot      = 'dist/';
 const sassFiles     = 'app/sass/**/*.scss';
@@ -138,7 +139,7 @@ gulp.task('clean:dist', function() {
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
-    // .pipe(ghPages());
+    .pipe(ghPages());
 });
 
 // --------------------------------------------------
