@@ -6,6 +6,13 @@ body{
     font-family: 'Roboto Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
      
+     background:   -webkit-linear-gradient(
+      rgba(5, 5, 5, 0.86), 
+      rgba(5, 5, 5, 0.86)
+    ),
+    /* bottom, image */
+    url('../images/mq1-predator.jpg');
+     
      background:   linear-gradient(
       rgba(5, 5, 5, 0.86), 
       rgba(5, 5, 5, 0.86)
@@ -39,6 +46,7 @@ img {
 .card-block{
     height: 40vh;
         background-color: rgba(52, 49, 40, 0.7);
+    -webkit-transition:box-shadow .25s;
     transition: box-shadow .25s;
     border-radius: 2px;
     /*overflow: auto; */
@@ -77,14 +85,12 @@ body {
  
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     background: black; 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
