@@ -16,7 +16,7 @@
             lifeLike: true,
             loop: false,
             loopDelay: 1000,
-            speed: 80,
+            speed: 20,
             startDelay: 600,
             breakDelay: 2000,
             breakLines: true,

@@ -1,20 +1,17 @@
 <h5 class="text-center" id="data-intro"></h5>
 
 <center>
-<div class="content">
-  <h1>Drone Strikes By Country</h1>
+  <h1 class="content">Drone Strikes By Country</h1>
     <h6>Drones have also been used in Syria and Libya</h6>
     <h8>Although no information has be released on these strikes...</h8>
   <div id="country-chart">
     <svg></svg>
   </div>
-</div>
 </center>
 
-<div class="content">
-<h1>   Drone Strikes By Year</h1>
-  <nvd3 style="fill:#0d6841;stroke:#0d6841;"   options="$ctrl.options" data="$ctrl.data"></nvd3>
-</div>
+
+<h1 class="content">   Drone Strikes By Year</h1>
+  <nvd3 class="strike-chart" style="fill:#0d6841;stroke:#0d6841;"   options="$ctrl.options" data="$ctrl.data"></nvd3>
 <script>
 
 nv.addGraph(function() {
