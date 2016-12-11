@@ -1,19 +1,76 @@
-<h5 class="text-center" id="data-intro"></h5>
+<h5 class="text-center"> Data Tracker</h5>
 
-<center>
-  <h1 class="content">Drone Strikes By Country</h1>
-    <h6>Drones have also been used in Syria and Libya</h6>
-    <h8>Although no information has be released on these strikes...</h8>
-  <div id="country-chart">
-    <svg></svg>
+<!--buttons-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4">
+      <button class="btn-data" ng-click="showCountryGraph=!showCountryGraph">  Drone Strikes By Country</button>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <button class="btn-data" ng-click="showYearGraph=!showYearGraph">  Drone Strikes By Year</button>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <button class="btn-data" ng-click="showMap=!showMap">Show the Map</button>
+    </div>
   </div>
-</center>
+</div>
+<!--country graph-->
+    <center>
+  <div class="by-country" ng-show="showCountryGraph">
+    <h1 class="content-b">Drone Strikes By Country</h1>
+    <h6 class="content-m">Drones have also been used in Syria and Libya</h6>
+    <h8 class="content-s">Although no information has be released on these strikes...</h8>
+    <div id="country-chart">
+      <svg  style="position:center;width:{{$ctrl.graphWidth}};height:{{$ctrl.graphWidth}}"></svg>
+    </div>
+  </div>
+    </center>
 
 
-<h1 class="content">   Drone Strikes By Year</h1>
-  <nvd3 class="strike-chart" style="fill:#0d6841;stroke:#0d6841;"   options="$ctrl.options" data="$ctrl.data"></nvd3>
+
+
+
+
+
+
+
+<!--Graph by year-->
+<div class="by-year" ng-show="showYearGraph">
+  <center>
+    <h1 class="content"> Drone Strikes By Year</h1>
+    <nvd3 class="strike-chart" style="fill:#0d6841;stroke:#0d6841;" options="$ctrl.options" data="$ctrl.data"></nvd3>
+  </center>
+</div>
+
+<div ng-show="showMap">
+  <center>
+  <h8><em> Map feature is currently down for maintenance but will return shortly...</em></h8>
+  </center>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Country Graph Data -->
 <script>
-
 nv.addGraph(function() {
   var donutChart = nv.models.pieChart()
   		.x(function(d) {
@@ -21,7 +78,8 @@ nv.addGraph(function() {
       })
   		.y(function(d) {
         return d.value
-      })
+      })        
+
   		.showLabels(true)
   		.showLegend(false)
   		.labelThreshold(.05)
@@ -32,7 +90,8 @@ nv.addGraph(function() {
       ) // This is for when I turn on tooltips
   		.tooltips(false)
   		.donut(true)
-  		.donutRatio(0.35);
+  		.donutRatio(0.35)
+      ;
   
   	// Insert text into the center of the donut
   	function centerText() {
@@ -68,7 +127,7 @@ nv.addGraph(function() {
     .transition().duration(300)
     .call(donutChart)
     .call(centerText())
-    .call(pieSlice());
+    .call(pieSlice())
     
   return donutChart;
 });
@@ -97,26 +156,4 @@ function seedData() {
             ];
 }
 
-</script>
-
-
-
-
-
-
-
- <div class="carousel">
-    <a class="carousel-item"><img src="images/stop.jpg"></a>
-    <a class="carousel-item"><img src="images/funeral.jpg"></a>
-    <a class="carousel-item"><img src="images/boy.jpg"></a>
-   <a class="carousel-item"><img src="images/flag.jpg"></a>
- 
-  </div>
-
-
-<script>
-    $(document).ready(function(){
-      $('.carousel').carousel();
-    });
-        
 </script>
