@@ -1,19 +1,9 @@
+@import "mixins.scss";
 @import "variables.scss";
 @import "override-defaults.scss";
 html {
     overflow: auto;
 }
-body {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    padding: 30px; 
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
 
 body{
     /*background: black; */
@@ -21,14 +11,23 @@ body{
     overflow:auto;
     font-family: 'Roboto Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
-     
-     background:   linear-gradient(
-      rgba(5, 5, 5, 0.86), 
-      rgba(5, 5, 5, 0.86)
-    ),
     /* bottom, image */
-    url('../images/mq1-predator.jpg');
-} 
+    background-image:url('../images/mq1-predator.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+.dark-overlay{
+    @include box(100%);
+    background:linear-gradient(
+      rgba(10, 20, 41, 0.86), 
+      rgba(10, 20, 41, 0.86), 
+      rgba(10, 20, 41, 0.86)
+    );
+}
+.page-container{
+    @extend .dark-overlay;
+}
 
 h3{
     color:$colorA;
@@ -50,7 +49,7 @@ img {
 }
 .card-block{
     height: 40vh;
-        background-color: rgba(52, 49, 40, 0.7);
+    background-color: rgba(52, 49, 40, 0.7);
     transition: box-shadow .25s;
     border-radius: 2px;
     /*overflow: auto; */
