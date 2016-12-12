@@ -8,4 +8,4 @@ angular.module('drone-tracker', [
         ])
 var app = angular.module('drone-tracker')
 
-app;
+console.log("here")

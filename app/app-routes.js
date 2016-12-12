@@ -29,3 +29,4 @@ let app = angular.module('drone-tracker')
 
 
 })(); 
+console.log("routes")
