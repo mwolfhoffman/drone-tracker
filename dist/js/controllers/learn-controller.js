@@ -8,26 +8,37 @@
     });
 
     LearnController.$inject = ['DroneService'];
+
     function LearnController(DroneService) {
         var lc = this;
+        lc.allstrikes = [];
 
-        $('#data-intro').typeIt({
-            strings: ['The data on this page is provided via The Bureau of Investigates ...'],
-            lifeLike: true,
-            loop: false,
-            loopDelay: 1000,
-            speed: 20,
-            startDelay: 600,
-            breakDelay: 2000,
-            breakLines: true,
-            callback: function callback() {
-                return $('#dr3one-intro').fadeOut(1000);
-            }
-        });
-        setInterval(function () {
-            $('#scroll-down').fadeToggle();
-        }, 1000);
+        lc.$onInit = function () {
+            debugger;
+            DroneService.mapStrikes(function (res) {
+                lc.allStrikes = res.data.strike;
+                console.log(lc.allStrikes);
+                return lc.allStrikes;
+            });
+        };
 
+        lc.getAll = function () {
+            DroneService.getAllStrikes(function (res) {
+                console.log(res.data.strike);
+                lc.allStrikes = res.data.strike;
+                return res.data.strike;
+            });
+        };
+
+        lc.getAllLocations = function () {
+            DroneService.getAllStrikes(function (res) {
+                console.log(res.data);
+            });
+        };
+
+        ///////////////////////////////////////////
+        //Check Mobile////////////////////////////
+        ////////////////////////////////////////////
         window.mobilecheck = function () {
             var check = false;
             (function (a) {
@@ -37,10 +48,12 @@
         };
 
         lc.graphWidth = window.mobilecheck() ? window.innerWidth - 50 : 400;
+        ///////////////////////////////////////////
+        //////////////////////////////////////////
+
 
         ///////////////pie char/////////////
         ///////////////////////////////
-
 
         lc.pieData = {
             chart: {
@@ -75,16 +88,7 @@
         //////////////////////////////////
 
 
-        lc.getAll = function () {
-            DroneService.getAllStrikes(function (res) {
-                // debugger
-                console.log(res.data.strike);
-                return res.data.strike;
-            });
-        };
-
         ////////////////////////
-        //nv
         lc.options = {
             chart: {
                 type: 'discreteBarChart',

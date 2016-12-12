@@ -3,5 +3,6 @@ angular.module('drone-tracker', [
     'ngSanitize',
     'angularUtils.directives.dirPagination' ,
     'nvd3' ,
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngMap'
         ])

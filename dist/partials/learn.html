@@ -15,6 +15,8 @@
     </div>
   </div>
 </div>
+
+
 <!--country graph-->
     <center>
   <div class="by-country" ng-show="showCountryGraph">
@@ -44,9 +46,15 @@
 </div>
 
 <div ng-show="showMap">
-  <center>
-  <h8><em> Map feature is currently down for maintenance but will return shortly...</em></h8>
-  </center>
+<center>  
+  <div class="by-map">
+    <ng-map zoom="2" center="[33.74, 73.18]">
+      <marker ng-repeat="strike in $ctrl.allStrikes"
+        position="{{strike.lat}}, {{strike.lon}}"> 
+        </marker>
+    </ng-map>
+  </div>
+</center>
 </div>
 
 
