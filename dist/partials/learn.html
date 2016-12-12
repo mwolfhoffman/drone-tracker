@@ -31,12 +31,6 @@
 
 
 
-
-
-
-
-
-
 <!--Graph by year-->
 <div class="by-year" ng-show="showYearGraph">
   <center>
@@ -48,12 +42,13 @@
 <div ng-show="showMap">
 <center>  
   <div class="by-map">
-    <ng-map zoom="2" center="[33.74, 73.18]">
+    <ng-map zoom="1" center="[33.74, 73.18]">
       <marker ng-repeat="strike in $ctrl.allStrikes"
         position="{{strike.lat}}, {{strike.lon}}"> 
         </marker>
     </ng-map>
   </div>
+  <h8>New Features Coming To Map Soon...</h8>
 </center>
 </div>
 
