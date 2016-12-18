@@ -29,10 +29,9 @@
             lifeLike: true,
             loop:false,
             loopDelay:1000,
-            speed:80,
             startDelay:600,
             breakDelay: 2000,
-            breakLines: true,
+            breakLines: false,
             callback: ()=>$('#dr3one-intro').fadeOut(1000)
         });
         setInterval(()=>{

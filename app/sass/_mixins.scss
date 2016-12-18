@@ -2,3 +2,25 @@
     width:$size;
     height:$size;
 }
+@mixin flex($justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin stretch{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+@mixin overlay($bg){
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:$bg;
+
+}

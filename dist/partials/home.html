@@ -2,50 +2,15 @@
 <center>
 
     <div class="container">
-            <div class="row">
-                <h4><span class="text-center" id="drone-intro" class="col s12 m8 flow-text"></span></h4>
+            <div class="text-left intro-container">
+                <span class="intro-text" id="drone-intro" class="col s12 m8 flow-text"></span>
             </div>
         </div>
                 <div id="strikeContainer"></div>
-                <!--<script>
-                    var newStrikeHTML = ()=>{
-                        var id = Date.now()
-                        return `
-                    <style>
-                                @keyframes strike${id}{
-                                        0%{
-                                            width:1;
-                                            height:1;
-                                            background:#ff003b;
-                                            opacity:1;
-                                            transform:scale(0)
-                                        }
-                                        100%{
-                                            opacity:0;
-                                            transform:scale(${Math.random()*50})
-                                        }
-                                    };
-                    </style>
-                    <div style="
-                                top:${Math.random()*window.innerHeight};
-                                left:${Math.random()*window.innerWidth};
-                                animation:strike${id} 1s;
-                                animation-timing-function:cubic-bezier(.14,.88,.66,.53);
-                                animation-delay:${Math.floor(1000*Math.random())}ms;
-                                "
-                                class="strike" 
-                                id="strike"
-                                ></div>
-                    `}
-                    var strikeHTML=''
-                    function addStrike(){
-                        $('#strikeContainer').append(newStrikeHTML())
-                    }
-                    var a = setInterval(addStrike, 1000)
-                </script>-->
+
 
 <i class="fa fa-long-arrow-right" id="info-arrow" aria-hidden="true"></i>
-
+    <!--<line-chart/>-->
 
 </center>
     <!--

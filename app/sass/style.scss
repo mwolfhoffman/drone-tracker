@@ -3,30 +3,33 @@
 @import "override-defaults.scss";
 html {
     overflow: auto;
+    font-size:16px;
 }
 
 body{
+    position:relative;
     /*background: black; */
-    color:$colorA;
+    color:$white;
+    color:rgba($white, 0.87);
     overflow:auto;
     font-family: 'Roboto Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
     /* bottom, image */
-    background-image:url('../images/mq1-predator.jpg');
+    background-image:url(../images/mq1-predator.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size:cover;
 
 }
 .dark-overlay{
-    @include box(100%);
-    background:linear-gradient(
-      rgba(10, 20, 41, 0.86), 
-      rgba(10, 20, 41, 0.86), 
-      rgba(10, 20, 41, 0.86)
-    );
+    background-color:#080e16;
+    background-color:rgba(8, 14, 22, 0.93);
 }
 .page-container{
+    /*@include box(100%);*/
     @extend .dark-overlay;
+    /*position: absolute;*/
+    /*@include stretch;*/
 }
 
 h3{
@@ -38,24 +41,45 @@ img {
     width:50%
 }
 
+.intro-container{
+    @include box(100%);
+    @include flex(center, flex-start);
+}
 
+.container-fluid{
+    @extend .intro-container
+}
+
+.intro-text{
+    margin-top:20%;
+    font-size:2rem;
+}
+
+.shadow-overlay{
+    @include overlay(linear-gradient(rgba($dark, 0.9), rgba($dark, 0.5)));
+    overflow-y:scroll;
+}
 
 .card{
     position: relative;
-    background-color: rgba(52, 49, 40, 0.7);
+    background-color: $dark;
     margin: 0.5rem 0 1rem 0;
     overflow-y: auto;
-
+    box-shadow:1px 0px 15px rgba(black, 0.2);
+    .card-block{
+        /*height: 40vh;*/
+        background-color:transparent;
+        transition: box-shadow .25s;
+        border-radius: 2px;
+        /*overflow: auto; */
+        &.card-reveal{
+            background-color:$dark;   
+        }
+    }
 }
-.card-block{
-    height: 40vh;
-    background-color: rgba(52, 49, 40, 0.7);
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    /*overflow: auto; */
-
+.black-text{
+    color:black;
 }
-
 
 
 .bar-graph {
@@ -92,4 +116,9 @@ img {
     animation: strike 2s;
     animation-iteration-count: 1;
     animation-timing-function:cubic-bezier(.14,.88,.66,.53)
+}
+
+ul.pagination{
+    margin-bottom: 0;
+    padding-bottom:15px;
 }

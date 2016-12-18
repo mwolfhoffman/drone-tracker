@@ -30,7 +30,9 @@ const sassFiles     = 'app/sass/**/*.scss';
 const cssFiles      = 'app/css/**/*.?(s)css';
 const jsFiles       = 'app/js/**/*.js';
 const controllers   = 'app/js/controllers/**/*.js';
-const services     = 'app/js/services/**/*.js';
+const services      = 'app/js/services/**/*.js';
+const directives    = 'app/js/directives/**/*.js';
+
 
 
 
@@ -86,7 +88,7 @@ gulp.task('images', () => {
 
 
 gulp.task('babel', () => {
-  return gulp.src([jsFiles, controllers, services])
+  return gulp.src([jsFiles, controllers, services, directives])
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(babel({
       presets: ['es2015']
