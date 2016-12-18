@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Drone Tracker</title>
   <!--Bootstrap CSS-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <!-- Compiled and minified Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
   <!--Materialize CSS Icons-->
@@ -20,33 +20,21 @@
 </head>
 
 <body>
-  <div class="page-container">
 
 
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-small black">
-      <i class="large material-icons">menu</i>
-    </a>
-    <ul>
-      <li ui-sref-active="active"><a ui-sref="home" class="btn-floating green"><i class="material-icons">publish</i></a>Home</li>
-      <li ui-sref-active="active"><a ui-sref="search" class="btn-floating red"><i class="material-icons">my_location</i></a>The Strikes</li>
-      <li ui-sref-active="active"><a ui-sref="learn" class="btn-floating yellow darken-1"><i class="material-icons">visibility</i></a>The Data</li>
-      <!--<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>-->
-    </ul>
-  </div>
 
 
-  <div class="background">
-    <div class="layer">
 
-      <div class="main-content">
+        <nav-touch></nav-touch>
         <ui-view></ui-view>
-      </div>
+  <!--<script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>-->
 
-    </div>
-  </div>
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
 
-  </div>
+<!--<script src="//d3js.org/queue.v1.min.js"></script>-->
+<!--<script src="//d3js.org/topojson.v1.min.js"></script>-->
   <!--JS jquery and bootstrap-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -75,7 +63,7 @@
 
 
   <!--d3-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>-->
   <!--nvd3-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
   <script src="https://rawgit.com/krispo/angular-nvd3/v1.0.5/dist/angular-nvd3.js"></script>
@@ -91,7 +79,7 @@
   <script src="./js/controllers/search-controller.js"></script>
   <script src="./js/controllers/learn-controller.js"></script>
 
-
+  <script src="./js/directives/directives.js"></script>
   <!--google maps w/ API key and ng-maps-->
   <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkEgEa7-4JVKfqyL0m_ZDTW5uynQpq6pQ"
     type="text/javascript"></script>
