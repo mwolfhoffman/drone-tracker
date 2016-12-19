@@ -1,6 +1,9 @@
     <!--search parameters-->
     <!--<center>-->
 <div class="shadow-overlay">
+    <div class="search-fixed-top">
+        <div class="shadow-overlay">
+
     <div class="container">
         <div class="row">
             <div class="country-search col s12 m6">
@@ -11,10 +14,10 @@
                         <option value="Somalia">Somalia</option>
                         <option value="Yemen">Yemen</option>
                     </select>
-                    <button class="waves-effect waves-light btn" id="country-button" ng-click="$ctrl.searchByCountry($ctrl.country)">Search</button>
+                    <button class="waves-effect waves-light btn btn-retro" id="country-button" ng-click="$ctrl.searchByCountry($ctrl.country)">Search</button>
                 </form>
             </div>
-            
+
 
             <div class="year-search col s12 m6">
                 <form class="search search-year-form">
@@ -37,7 +40,7 @@
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
             </select>
-                    <button class="waves-effect waves-light btn" id="year-button" ng-click="$ctrl.searchByYear($ctrl.year)">Search</button>
+                    <button class="waves-effect waves-light btn btn-retro" id="year-button" ng-click="$ctrl.searchByYear($ctrl.year)">Search</button>
                 </form>
             </div>
         </div>
@@ -47,7 +50,9 @@
         $('select').material_select();
     });
     </script>
-
+</div>
+</div>
+<div class="search-result-spacer"></div>
 
 
     <!--Results and Pagination Choice-->
@@ -63,7 +68,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+    </div>
 
         <!--<div class="row">-->
             <!--<center>-->
@@ -71,8 +76,6 @@
             <!--</center>
     </div>
     </div>-->
-
-
 
             <div class="row">
                 <div dir-paginate="strike in $ctrl.arr | itemsPerPage: $ctrl.pageSize" current-page="$ctrl.currentPage">
@@ -105,7 +108,7 @@
     <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="./dirPagination.tpl.html"></dir-pagination-controls>
 </div>
 
-<strike-animation></strike-animation>
+<!--<strike-animation></strike-animation>-->
     <!--<script>
     $(document).ready(function(){
     $("#link-btn").click(function(){

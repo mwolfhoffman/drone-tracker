@@ -24,3 +24,23 @@
     background:$bg;
 
 }
+
+@mixin block-fixed-top($height){
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:$height;
+}
+
+@mixin spacer-vertical($height){
+    padding-top:$height;
+    width:100%;
+}
+
+@mixin bg-fixed($url){
+    background-image:url($url);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
