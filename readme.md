@@ -6,7 +6,9 @@ I also tried out various data visualization libraries, ultimately deciding on D3
 ##Tech Used: 
 
 
--HTML5/CSS3
+-HTML5/CSS3/SASS
+
+-Gulp
 
 -Bootstrap
 
