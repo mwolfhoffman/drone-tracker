@@ -1,7 +1,9 @@
+#Drone Tracker
+
 This was my first independent project so that I could learn how to use AngularJS. 
 I also tried out various data visualization libraries, ultimately deciding on D3js. 
 
-Tech Used: 
+##Tech Used: 
 
 
 -HTML5/CSS3
