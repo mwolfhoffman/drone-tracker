@@ -2,7 +2,7 @@
 
 angular.module('drone-tracker').directive('lineChart', function () {
     return {
-        templateUrl: '/partials/line-chart.html',
+        templateUrl: 'partials/line-chart.html',
         link: function link(scope, elem, attrs) {
 
             var width = window.innerWidth,
@@ -49,7 +49,7 @@ angular.module('drone-tracker').directive('lineChart', function () {
         }
     };
 }).component('strikeAnimation', {
-    templateUrl: '/partials/strike-animation.html',
+    templateUrl: 'partials/strike-animation.html',
     controller: function controller() {
         var newStrikeHTML = function newStrikeHTML() {
             var id = Date.now();
@@ -62,6 +62,6 @@ angular.module('drone-tracker').directive('lineChart', function () {
         var a = setInterval(addStrike, 1000);
     }
 }).component('navTouch', {
-    templateUrl: '/partials/nav.html',
+    templateUrl: 'partials/nav.html',
     controller: function controller() {}
 });
