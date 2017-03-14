@@ -42,8 +42,9 @@ img {
 }
 
 .intro-container{
-    @include box(100%);
-    @include flex(center, flex-start);
+    @include box(88%);
+    @include flex(flex-start, flex-start);
+    margin-left: 12%;
 }
 
 .container-fluid{
@@ -180,4 +181,7 @@ ul.pagination{
 
 .text-center{
     text-align: center;
+}
+.text-left{
+    text-align: left;
 }
